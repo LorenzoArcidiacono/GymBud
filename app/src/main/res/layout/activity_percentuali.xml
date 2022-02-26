@@ -24,16 +24,18 @@
             android:textSize="16dp" />
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/massimale_input_text"
+            android:id="@+id/percentuali_input_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_toRightOf="@id/massimale_text_view"
             android:padding="16dp"
-            android:text="Kg"
+            android:hint="Kg"
+            android:inputType="numberDecimal"
             android:textSize="16dp" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/percentuali_fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -45,11 +47,14 @@
     </RelativeLayout>
 
     <com.google.android.material.textview.MaterialTextView
-        android:layout_width="wrap_content"
+        android:id="@+id/percentuali_txt"
+        style="@style/TextAppearance.AppCompat.Button"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:padding="16dp"
-        android:text="95%:\n90%:\n85%:"
-        style="@style/TextAppearance.AppCompat.Medium"
+        android:text="Risultato"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/relative_layout" />
 
