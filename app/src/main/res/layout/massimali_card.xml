@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card"
-        android:layout_width="wrap_content"
+        android:id="@+id/massimale_card"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
         app:strokeWidth="1dp"
-        app:strokeColor="@color/black_1"
+        app:strokeColor="@color/material_on_surface_stroke"
         app:cardElevation="0dp">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
@@ -24,21 +24,25 @@
                 android:padding="16dp">
 
                 <!-- Title, secondary and supporting text -->
+
                 <TextView
+                    android:id="@+id/massimale_exercise_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="title"
-                    android:textAppearance="?attr/textAppearanceHeadline6"
-                    />
+                    android:textAppearance="?attr/textAppearanceHeadline6" />
+
                 <TextView
+                    android:id="@+id/massimale_weight_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="valore Kg"
-                    android:textAppearance="?attr/textAppearanceBody2"
-                    android:textColor="?android:attr/textColorSecondary"
-                    />
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    android:textColor="?android:attr/textColorSecondary" />
+
                 <TextView
+                    android:id="@+id/massimale_data_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
@@ -51,22 +55,25 @@
 
             <!-- Buttons -->
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:gravity="end">
                 <com.google.android.material.button.MaterialButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
                     android:text="percentuali"
-                    style="?attr/borderlessButtonStyle"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    app:strokeColor="@color/primary_red"
                     />
                 <com.google.android.material.button.MaterialButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="modifica"
-                    style="?attr/borderlessButtonStyle"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    app:strokeColor="@color/primary_red"
                     />
             </LinearLayout>
 

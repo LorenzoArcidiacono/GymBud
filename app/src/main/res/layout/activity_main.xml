@@ -26,30 +26,38 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/RelativeLayoutMain">
+        app:layout_constraintTop_toBottomOf="@id/RelativeLayoutMain"
+        android:gravity="center_horizontal">
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center">
+            android:gravity="center_horizontal">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/massimali_button"
                 android:layout_margin="8dp"
                 android:padding="8dp"
-                android:text="Massimali" />
+                android:text="Massimali"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:strokeColor="@color/primary_red"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/percentuali_button"
                 android:layout_margin="8dp"
                 android:padding="8dp"
-                android:text="Percentuali" />
+                android:text="Percentuali"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:strokeColor="@color/primary_red"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/dischi_button"
                 android:layout_margin="8dp"
                 android:padding="8dp"
-                android:text="Calcolo Dischi" />
+                android:text="Dischi"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:strokeColor="@color/primary_red"/>
+
         </TableRow>
 
     </TableLayout>

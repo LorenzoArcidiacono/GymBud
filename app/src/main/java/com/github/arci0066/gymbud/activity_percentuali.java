@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -18,8 +19,8 @@ public class activity_percentuali extends AppCompatActivity implements View.OnCl
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_percentuali);
-        FloatingActionButton fab = findViewById(R.id.percentuali_fab);
-        fab.setOnClickListener(this);
+        Button btn = findViewById(R.id.percentuali_btn);
+        btn.setOnClickListener(this);
     }
 
     @Override
