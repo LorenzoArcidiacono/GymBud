@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.github.arci0066.gymbud">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
         android:allowBackup="true"
@@ -9,7 +8,10 @@
         android:roundIcon="@mipmap/ic_gymbud_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GymBud">
-        <activity android:name=".activity_dischi"></activity>
+        <activity
+            android:name="com.github.arci0066.gymbud.CountRepActivity"
+            android:exported="false" />
+        <activity android:name=".activity_dischi" />
         <activity android:name=".activity_percentuali" />
         <activity android:name=".MassimaliActivity" />
         <activity android:name=".MainActivity">

@@ -13,12 +13,22 @@
         android:layout_margin="16dp"
         android:src="@drawable/ic_baseline_add_24"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:shapeAppearanceOverlay="@style/fabshape"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/massimali_actvity_image"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/massimali_image"
+        android:scaleType="centerCrop" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
         android:id="@+id/massimali_rv"
-        />
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/massimali_actvity_image" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

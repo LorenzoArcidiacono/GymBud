@@ -5,14 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity_percentuali">
-
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/percentuali_actvity_image"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/percentage_image"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"/>
     <RelativeLayout
         android:id="@+id/relative_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/percentuali_actvity_image">
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/massimale_text_view"
@@ -20,7 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:padding="16dp"
-            android:text="massimale:"
+            android:text="Massimale:"
             android:textSize="16dp" />
 
         <com.google.android.material.textfield.TextInputEditText
@@ -36,27 +42,28 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/percentuali_btn"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            app:strokeColor="@color/primary_red"
+            style="@style/Widget.MyApp.OutlinedButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/percentuali_input_text"
             android:layout_alignBottom="@+id/percentuali_input_text"
             android:layout_alignParentEnd="true"
             android:layout_marginRight="16dp"
-            android:text="Calcola" />
+            android:text="Calcola"
+            app:strokeColor="@color/primary_red" />
 
     </RelativeLayout>
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/percentuali_txt"
-        style="@style/TextAppearance.AppCompat.Button"
+        style="@style/TextAppearance.AppCompat.Title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_marginTop="16dp"
         android:padding="16dp"
         android:text="Risultato"
+        android:textSize="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/divider" />

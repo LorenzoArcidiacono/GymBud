@@ -6,13 +6,122 @@
     android:layout_height="match_parent"
     tools:context=".activity_dischi">
 
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/disk_actvity_image"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/disk_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Scelta Dischi disponibili -->
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/disk_actvity_image">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbarAlwaysDrawHorizontalTrack="false"
+            android:scrollbarStyle="outsideInset"
+            android:scrollbars="none">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chip_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_25"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="25kg" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_20"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="20kg" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_15"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="15kg" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_10"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="10kg" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_5"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="5kg" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_2_5"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="2.5kg" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_1_25"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="1.25kg" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_0_5"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="0.5kg" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_0_25"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="0.25kg" />
+
+            </com.google.android.material.chip.ChipGroup>
+
+        </HorizontalScrollView>
+    </LinearLayout>
+
     <!-- Dati da inserire -->
 
     <!-- Text View -->
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textView"
         style="@style/TextAppearance.AppCompat.Medium"
-
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
@@ -20,36 +129,33 @@
         android:layout_marginTop="16dp"
         android:text="Peso Totale"
         app:layout_constraintStart_toStartOf="parent"
-
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/linear_layout" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textView2"
         style="@style/TextAppearance.AppCompat.Medium"
-
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="30dp"
         android:text="Peso Sbarra"
         app:layout_constraintStart_toStartOf="parent"
-
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <!-- Input Text -->
 
     <com.google.android.material.textfield.TextInputEditText
-        style="@style/TextAppearance.AppCompat.Small"
         android:id="@+id/peso_totale_txt"
+        style="@style/TextAppearance.AppCompat.Small"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginEnd="4dp"
         android:elevation="1dp"
+        android:hint="0 Kg"
         android:inputType="numberDecimal"
         android:padding="16dp"
-        android:hint="0 Kg"
         app:layout_constraintBottom_toBottomOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="@+id/peso_sbarra_txt"
         app:layout_constraintLeft_toRightOf="@id/textView"
@@ -63,9 +169,9 @@
         android:layout_marginHorizontal="16dp"
         android:layout_marginLeft="16dp"
         android:elevation="1dp"
+        android:hint="20 Kg"
         android:inputType="number"
         android:padding="16dp"
-        android:hint="20 Kg"
         app:layout_constraintBottom_toBottomOf="@+id/textView2"
         app:layout_constraintLeft_toRightOf="@id/textView2"
         app:layout_constraintTop_toTopOf="@+id/textView2" />
@@ -73,27 +179,16 @@
     <!-- Button -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/calculate_dischi_button"
-        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-        app:strokeColor="@color/primary_red"
-
+        style="@style/Widget.MyApp.OutlinedButton"
         android:layout_width="wrap_content"
+
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:text="calcola"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:strokeColor="@color/primary_red" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/choose_dischi_button"
-        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-        app:strokeColor="@color/primary_red"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:text="Dischi Disponibili"
-        app:layout_constraintEnd_toStartOf="@+id/calculate_dischi_button"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <!-- -->
     <com.google.android.material.divider.MaterialDivider
@@ -105,13 +200,16 @@
 
     <!-- Dati calcolati -->
     <com.google.android.material.textview.MaterialTextView
-        style="@style/TextAppearance.AppCompat.Button"
         android:id="@+id/risultato_dischi_txt"
+        style="@style/TextAppearance.AppCompat.Title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Risultato"
         android:gravity="center"
-        android:padding="16dp"
+        android:text="Risultato"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialDivider" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

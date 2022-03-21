@@ -4,61 +4,80 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/main_background_image"
     tools:context=".MainActivity">
 
-    <RelativeLayout
-        android:id="@+id/RelativeLayoutMain"
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/materialTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/TableLayoutMain"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Benvenuto in GymBud"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@color/yellow_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <com.google.android.material.textview.MaterialTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Benvenuto in GymBud"
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
-    </RelativeLayout>
 
-    <TableLayout
-        android:id="@+id/TableLayoutMain"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/main_recview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/RelativeLayoutMain"
-        android:gravity="center_horizontal">
+        app:layout_constraintTop_toBottomOf="@+id/materialTextView" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal">
+    <!--    <RelativeLayout-->
+    <!--        android:id="@+id/RelativeLayoutMain"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:layout_constraintBottom_toTopOf="@id/TableLayoutMain"-->
+    <!--        app:layout_constraintTop_toTopOf="parent">-->
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/massimali_button"
-                android:layout_margin="8dp"
-                android:padding="8dp"
-                android:text="Massimali"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                app:strokeColor="@color/primary_red"/>
+    <!--       -->
+    <!--    </RelativeLayout>-->
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/percentuali_button"
-                android:layout_margin="8dp"
-                android:padding="8dp"
-                android:text="Percentuali"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                app:strokeColor="@color/primary_red"/>
+    <!--    <TableLayout-->
+    <!--        android:id="@+id/TableLayoutMain"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:gravity="center_horizontal"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/RelativeLayoutMain">-->
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/dischi_button"
-                android:layout_margin="8dp"
-                android:padding="8dp"
-                android:text="Dischi"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                app:strokeColor="@color/primary_red"/>
+    <!--        <TableRow-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:gravity="center_horizontal">-->
 
-        </TableRow>
+    <!--            <com.google.android.material.button.MaterialButton-->
+    <!--                android:id="@+id/massimali_button"-->
+    <!--                style="@style/Widget.MyApp.OutlinedButton"-->
+    <!--                android:layout_margin="8dp"-->
+    <!--                android:padding="8dp"-->
+    <!--                android:text="Massimali"-->
+    <!--                app:strokeColor="@color/primary_red" />-->
 
-    </TableLayout>
+    <!--            <com.google.android.material.button.MaterialButton-->
+    <!--                android:id="@+id/percentuali_button"-->
+    <!--                style="@style/Widget.MyApp.OutlinedButton"-->
+    <!--                android:layout_margin="8dp"-->
+    <!--                android:padding="8dp"-->
+    <!--                android:text="Percentuali"-->
+    <!--                app:strokeColor="@color/primary_red"-->
+    <!--                />-->
+
+    <!--            <com.google.android.material.button.MaterialButton-->
+    <!--                android:id="@+id/dischi_button"-->
+    <!--                style="@style/Widget.MyApp.OutlinedButton"-->
+    <!--                android:layout_margin="8dp"-->
+    <!--                android:padding="8dp"-->
+    <!--                android:text="Dischi"-->
+    <!--                app:strokeColor="@color/primary_red" />-->
+
+    <!--        </TableRow>-->
+
+    <!--    </TableLayout>-->
 </androidx.constraintlayout.widget.ConstraintLayout>
